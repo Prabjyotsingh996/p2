@@ -31,7 +31,7 @@
     max-width: 1800px;
     padding: 2.5rem;
   }
-
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -85,3 +85,8 @@
     font-size: 0.8rem;
   }
 }
+@media (max-width: 1024px) { 
+}
+
+@media (max-width: 768px) 
+
