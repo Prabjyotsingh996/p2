@@ -43,8 +43,8 @@ const Header = () => {
         {/* Authors */}
         <div className="text-center mb-10 space-y-3">
           <div className="text-lg text-muted-foreground flex flex-wrap justify-center items-center gap-x-2 gap-y-1">
-            <a href="https://www.tajamulashraf.com/" className="text-primary hover:underline">Tajamul Ashraf</a><span className="text-sm">1</span>,
-            <a href="https://www.janibbashir.com/" className="text-primary hover:underline">Janibul Bashir</a><span className="text-sm">2</span>
+            <a href="https://www.tajamulashraf.com/" className="text-primary hover:underline">Tajamul Ashraf<sup>1</sup></a>
+            <a href="https://www.janibbashir.com/" className="text-primary hover:underline">Janibul Bashir<sup>2</sup></a>
           </div>
 
           <div className="text-sm text-muted-foreground leading-relaxed space-y-1">
