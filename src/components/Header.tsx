@@ -13,13 +13,15 @@ const Header = () => {
       <div className="relative max-w-5xl mx-auto px-6 pt-16 pb-10 sm:pt-20">
 
         {/* Logo Centered */}
-        <div className="flex justify-center mb-6">
-          <img
-            src="IMAGES/logo.png"
-            alt="Logo"
-            className="w-24 h-24 sm:w-28 sm:h-28 object-contain"
-          />
-        </div>
+         <div className="flex justify-center mb-4 sm:mb-6">
+  <a href="https://gaash.nitsri.ac.in/" target="_blank" rel="noopener noreferrer">
+    <img
+      src="IMAGES/logo.png"
+      alt="NIT Logo"
+      className="w-20 h-20 sm:w-24 sm:h-24 object-contain hover:scale-105 transition-transform duration-300"
+    />
+  </a>
+</div>
 
         {/* Title */}
         <div className="text-center">

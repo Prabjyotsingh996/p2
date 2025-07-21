@@ -7,7 +7,7 @@ const AblationSection = () => {
 
   return (
     <section className="bg-muted/30 py-16">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-5xl mx-auto px-6 sm:px-4 xs:px-2">
         <h2 className="text-3xl font-bold text-center mb-8 text-foreground">
           Ablation Study
         </h2>

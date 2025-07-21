@@ -1,7 +1,7 @@
 const TeaserSection = () => {
   return (
     <section className="bg-background py-12 transition-colors duration-300">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6 sm:px-4 xs:px-2">
         {/* Main Teaser Image */}
         <div className="text-center mb-8 animate-fade-in">
           <img 

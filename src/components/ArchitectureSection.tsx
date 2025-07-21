@@ -1,7 +1,7 @@
 const ArchitectureSection = () => {
   return (
     <section className="bg-background py-16 transition-colors duration-300">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6 sm:px-4 xs:px-2">
         <h2 className="text-3xl font-bold text-center mb-8 text-foreground">
           <strong>TITAN</strong> Architecture
         </h2>
@@ -20,11 +20,11 @@ and many negative samples in an object detection problem, directly applying trad
  Thus, there is a need to develop techniques specially tailored for SF-DAOD. <strong>Problems in Current SF-DOAD Approaches.</strong> Many popular SF-DAOD techniques utilize a self-supervised approach
  in a student-teacher (ST) framework. These approaches rely on self-training using pseudo-labels produced by a model pre-trained on the source domain. [13, 53, 56, 86, 98]. How
 ever, if the source data is biased, or the domain shift between source and target domains is high, then there is significant noise in the pseudo-labels, which impacts the training of a
- student model [19]. Since the pseudo-label error is significant, hence, Exponential Moving Average (EMA) step which updates the teacher model from the student model’s weight,
+ student model [19]. Since the pseudo-label error is significant, hence, Exponential Moving Average (EMA) step which updates the teacher model from the student model's weight,
  ends up corrupting the teacher model as well. This is typically not a problem in the UDA setting, as supervised data from the source domain, acts as an anchor and prevents error
  accumulation in the student, and then the EMA step ensures that the teacher model does not get corrupted at any point in the training/adaptation.
-<strong>Solution Strategies to Mitigate SF-DOAD Problems.</strong> To tackle the above issues in SF-DAOD recent techniques [13, 71] have proposed to use a larger update step size for EMA to slow down the teacher model’s updating process
- deliberately. An alternative strategy involves emphasizing the past teacher model’s influence by adjusting its contribution, thereby preserving previous knowledge and reducing
+<strong>Solution Strategies to Mitigate SF-DOAD Problems.</strong> To tackle the above issues in SF-DAOD recent techniques [13, 71] have proposed to use a larger update step size for EMA to slow down the teacher model's updating process
+ deliberately. An alternative strategy involves emphasizing the past teacher model's influence by adjusting its contribution, thereby preserving previous knowledge and reducing
  the rate of model updates. However, such attempts have demonstrated limited effectiveness [62].<strong>Our Insights and Proposed Strategy.</strong>  To tackle this is
 sue, we propose a query-token-driven adversarial learning approach (<strong>TITAN</strong>). Our method employs a variance-based detection strategy to separate target data into easy and chal
 lenging subsets, leveraging the insight that greater detection variance aligns with higher recall and stronger resemblance to the source domain, as illustrated in Fig. 1. Next, we

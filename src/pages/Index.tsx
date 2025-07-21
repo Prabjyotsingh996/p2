@@ -9,7 +9,7 @@ import CitationSection from "@/components/CitationSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background font-academic">
+    <div className="min-h-screen bg-background font-academic overflow-x-hidden">
       <Header />
       <TeaserSection />
       <AbstractSection />
