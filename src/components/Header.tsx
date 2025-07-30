@@ -7,25 +7,42 @@ const Header = () => {
     { label: "Paper", url: "https://arxiv.org/pdf/2506.21484", icon: FileText },
     { label: "arXiv", url: "https://arxiv.org/abs/2506.21484", icon: ExternalLink },
   ];
+ const images = [
+    "IMAGES/m1.png",
+    "IMAGES/m2.png",
+    "IMAGES/m3.png",
+    "IMAGES/m4.png",
+  ];
 
   return (
     <header className="bg-background border-b border-border transition-colors duration-300">
       <div className="relative max-w-5xl mx-auto px-6 pt-16 pb-10 sm:pt-20">
 
         {/* Logo Centered */}
-         <div className="flex justify-center mb-4 sm:mb-6">
-  <a href="https://gaash.nitsri.ac.in/" target="_blank" rel="noopener noreferrer">
-    <img
-      src="IMAGES/logo.png"
-      alt="NIT Logo"
-      className="w-20 h-20 sm:w-24 sm:h-24 object-contain hover:scale-105 transition-transform duration-300"
-    />
-  </a>
-</div>
+          <div className="flex justify-center items-center gap-6 mb-6">
+          {/* First logo */}
+          <a href="https://gaash.nitsri.ac.in/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="images/logo.png"
+              alt="NIT Logo"
+              className="w-32 h-32 sm:w-40 sm:h-40 object-contain hover:scale-105 transition-transform duration-300"
+            />
+          </a>
+
+          {/* Second uploaded logo */}
+          <a href="https://www.nitsri.ac.in/" target="_blank" rel="noopener noreferrer">
+            <img
+              src="images/nit logo.png"
+              alt="Institute Logo"
+              className="w-[200px] h-auto sm:w-[230px] object-contain hover:scale-105 transition-transform duration-300"
+              style={{ maxHeight: "80px" }}
+            />
+          </a>
+        </div>
 
         {/* Title */}
         <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground leading-tight animate-fade-in mb-6">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground leading-tight animate-fade-in mb-6">
             <span className="text-primary font-extrabold">TITAN</span>: Query-Token based Domain Adaptive Adversarial Learning
           </h1>
         </div>
@@ -76,6 +93,18 @@ const Header = () => {
               </a>
             </Button>
           ))}
+        </div>
+          <div className="overflow-hidden relative w-full max-w-5xl mx-auto rounded-xl border shadow-lg animate-fade-in mt-0">
+          <div className="flex w-[200%] animate-marquee space-x-4 pause-on-hover">
+            {images.concat(images).map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={`scroll-${i}`}
+                className="h-32 sm:h-40 md:h-72 lg:h-96 w-1/4 object-contain rounded-md flex-shrink-0 border-r border-border/50 bg-background"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </header>
