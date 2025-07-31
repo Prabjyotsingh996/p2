@@ -94,14 +94,15 @@ const Header = () => {
             </Button>
           ))}
         </div>
-          <div className="overflow-hidden relative w-full max-w-5xl mx-auto rounded-xl border shadow-lg animate-fade-in mt-0">
-          <div className="flex w-[200%] animate-marquee space-x-4 pause-on-hover">
+          <div className="overflow-hidden relative w-full max-w-5xl mx-auto rounded-xl border shadow-lg mt-0">
+          <div className="flex w-[200%] animate-marquee pause-on-hover">
             {images.concat(images).map((src, i) => (
               <img
                 key={i}
                 src={src}
                 alt={`scroll-${i}`}
-                className="h-32 sm:h-40 md:h-72 lg:h-96 w-1/4 object-contain rounded-md flex-shrink-0 border-r border-border/50 bg-background"
+                className="h-32 sm:h-40 md:h-72 lg:h-96 w-1/4 object-cover flex-shrink-0"
+                draggable={false}
               />
             ))}
           </div>
